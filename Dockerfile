@@ -68,7 +68,7 @@ RUN mkdir /bazel && \
     rm -f /bazel/bazel-$BAZEL_VERSION-installer-linux-x86_64.sh
 
 # Download TensorFlow Serving
-RUN git clone --recurse-submodules https://github.com/tensorflow/serving && \
+RUN git clone --branch 1.4.0 --recurse-submodules https://github.com/tensorflow/serving && \
   cd serving && \
   git checkout
 
